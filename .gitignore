@@ -1,0 +1,5 @@
+.DS_Store
+*.json
+*.csv
+github_activity_summary.md
+google_docs_files_summary.md
