@@ -88,6 +88,9 @@ def main():
             .execute()
         )
         for event in resp.get("items", []):
+            # Omit recurring events (instances of a series)
+            if event.get("recurringEventId"):
+                continue
             start_str = parse_event_time(event, "start")
             end_str = parse_event_time(event, "end")
             date_str = start_str[:10] if start_str else ""
@@ -96,6 +99,9 @@ def main():
             organizer = (event.get("organizer") or {}).get("email") or ""
             attendees = event.get("attendees") or []
             attendees_count = len(attendees)
+            # Omit events where you're alone (no other attendees)
+            if attendees_count == 0:
+                continue
             # Conference link (Meet, etc.)
             conf = event.get("conferenceData") or {}
             entry = (conf.get("entryPoints") or [])
