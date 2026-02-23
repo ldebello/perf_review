@@ -46,14 +46,14 @@ uv pip install google-api-python-client google-auth-httplib2 google-auth-oauthli
 
 ```bash
 source .venv/bin/activate
-python gh_export.py --token <your_github_token> --user <your_github_username> --since 2025-03-01 --until 2025-09-12
+python gh_export.py --token <your_github_token> --user <your_github_username> --since 2025-02-01 --until 2026-01-31
 ```
 
 ### Google Docs Activity Export
 
 ```bash
 source .venv/bin/activate
-python gdocs_export.py --since 2025-03-01 --until 2025-09-12 \
+python gdocs_export.py --since 2025-02-01 --until 2026-01-31 \
   --out google_docs_activity.csv \
   --summary_csv google_docs_files_summary.csv \
   --summary_md google_docs_files_summary.md
