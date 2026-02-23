@@ -8,6 +8,7 @@ from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
 
 SCOPES = [
+    "https://www.googleapis.com/auth/calendar.readonly",
     "https://www.googleapis.com/auth/drive.activity.readonly",
     "https://www.googleapis.com/auth/drive.metadata.readonly",
 ]

@@ -3,3 +3,5 @@
 *.csv
 github_activity_summary.md
 google_docs_files_summary.md
+meetings_activity.csv
+meetings_summary.md
