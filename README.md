@@ -83,8 +83,6 @@ source .venv/bin/activate
 python calendar_export.py --since 2025-02-01 --until 2026-01-31
 ```
 
-Optional: `--out meetings_activity.csv` and `--summary_md meetings_summary.md` (these are the defaults).
-
 **Note:** If you don't specify dates, the scripts will default to approximately 6 months back from today.
 
 ## Output Files
